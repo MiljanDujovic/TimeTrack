@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Passion+One:wght@700;900&family=Roboto&display=swap" rel="stylesheet">
+<style>
+
+*{ 
+    margin: 0;
+	border: 0;
+    padding: 0;
+    background-color: #202630;
+}
+
+.bttn {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 42%;
+    margin-right: 25%;
+	text-align: center;
+	text-decoration: none;
+	font-weight: 800;
+	padding: 10px 7%;
+	border-radius: 10px;
+	color: black;
+	font-family: 'Roboto', sans-serif;
+	background:  #00cc66;
+
+}
+.line {
+    border-style: solid;
+    border-bottom-width:  2px;
+    border-color: #00cc66;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-family: 'Roboto', sans-serif;
+}
+.text {
+    color:white;
+    margin-top: 1%;
+    margin-bottom: 0.5%;
+    margin-left: 40%;
+    margin-right: 38%;
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+}
+.text2{
+    color:gray;
+    text-align: center;
+    margin-bottom: 25px;
+}
+@media (max-width: 600px) {
+	.text {		
+	    text-align: center;
+	}
+    .text2 {
+	    text-align: center;
+	}
+}
+</style>
+</head>
+<body>
+    <div class="text2">
+        <img  src="assets/sign in page active button.png">
+    </div>        
+    <form  (submit)="registerUser($event)">
+        <div class="text">
+            <p>FULL NAME</p>
+            <div class="line">
+                <input style="color:white" type="text" placeholder="John Doe" id="fullname"><br>
+            </div>
+            <p>EMAIL</p>
+            <div class="line">
+                <input style="color:white" type="text" placeholder="email@example.com" id="username"><br>
+            </div>
+            <p>PASSWORD</p>
+            <div class="line">
+            <input style="color:white" type="password" placeholder="5+ characters" id="password"><br>             
+            </div>   
+            <p>CONFIRM PASSWORD</p>
+            <div class="line">
+            <input style="color:white" type="password" placeholder="Confirm password" id="cpassword"><br>             
+            </div>    
+        </div>
+        <input style="color:white" class="bttn" type="submit" value="SIGN UP">
+        <div>
+            <p class="text2">Already a member? <a href="/" style="color:#00cc66; text-decoration: none; font-weight: bold;">SIGN IN</a></p>
+        </div>
+        <div>
+			<p class="text2">By clicking Sign up, you agree to TIME TRACK's <br><a style="text-decoration: underline; font-weight: bold;"  >Terms and Conditions</a> and <a style="text-decoration: underline; font-weight: bold;" >Privacy Policy</a>.</p>
+        </div>
+        <br><br>
+    </form> 
+</body> 
+</html>

@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Passion+One:wght@700;900&family=Roboto&display=swap" rel="stylesheet">
+<style>
+
+*{ 
+    margin: 0;
+	border: 0;
+    padding: 0;
+    background-color: #202630;
+}
+.background{
+    background-color: white;
+}
+.bttn {
+    margin-top: 2%;
+    margin-bottom: 0.5%;
+    margin-left: 42%;
+    margin-right: 25%;
+	text-align: center;
+	text-decoration: none;
+	font-weight: 800;
+	padding: 10px 7%;
+	border-radius: 10px;
+	color: black;
+	font-family: 'Roboto', sans-serif;
+	background:  #00cc66;
+
+}
+.bttn2 {
+    margin-top: 0%;
+    margin-bottom: 0%;
+    margin-left: 42%;
+    margin-right: 25%;
+	text-align: center;
+	text-decoration: none;
+	font-weight: 800;
+	padding: 10px 7%;
+	border-radius: 10px;
+	color: black;
+	font-family: 'Roboto', sans-serif;
+	background:  gray;
+
+}
+.line {
+    border-style: solid;
+    border-bottom-width:  2px;
+    border-color: #00cc66;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-family: 'Roboto', sans-serif;
+}
+.text {
+    color:black;
+    margin-top: 1%;
+    margin-bottom: 0.5%;
+    margin-left: 40%;
+    margin-right: 38%;
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    background-color: white;
+}
+h1 {
+  word-spacing: 10px;
+}
+.text2{
+
+    color:gray;
+    text-align: center;
+    margin-bottom: 25px;
+    font-family: 'Roboto', sans-serif;
+}
+
+@media (max-width: 600px) {
+	.text {
+	    text-align: center;
+	}
+    .text2 {
+	    text-align: center;
+	}
+}
+</style>
+</head>
+<body>
+    <form >
+    <div class="text2" style="text-align: center;">
+        <img src="assets/sign in page active button.png"> 
+    </div> 
+    
+    <div class="background">   
+        <div class="text" style="font-weight: bold;">
+            <br>
+            {{time | date : "EEEE d MMM,  HH:mm"}}
+        </div>  
+        <div class="text" style=" text-align: center; font-size: 20px;">
+            <br><br>
+            TOTAL TIME SPENT TODAY
+            <br>
+        </div>
+        <div class="text" style="font-size:100px; text-align: center;">
+            {{ clock | date: 'HH:mm' }}
+        </div> 
+        <div class="text" style="font-weight: bold; text-align: center; word-spacing: 50px;">
+                HOURS MINUTES
+        </div>
+        <br><br>  
+        <input style="color:black" class="bttn2" type="submit" value="REPORTS" onclick="">
+        <input style="color:white" class="bttn" type="submit" value="CLOCK IN" onclick="clockInButtonPressed($pressed)">
+    </div> 
+    </form>
+</body>
+</html>

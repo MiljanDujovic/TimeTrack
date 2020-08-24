@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Passion+One:wght@700;900&family=Roboto&display=swap" rel="stylesheet">
+<style>
+
+*{ 
+    margin: 0;
+	border: 0;
+    padding: 0;
+    background-color: #202630;
+}
+
+.bttn {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 42%;
+    margin-right: 25%;
+	text-align: center;
+	text-decoration: none;
+	font-weight: 800;
+	padding: 10px 7%;
+	border-radius: 10px;
+	color: black;
+	font-family: 'Roboto', sans-serif;
+	background:  #00cc66;
+
+}
+.line {
+    border-style: solid;
+    border-bottom-width:  2px;
+    border-color: #00cc66;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-family: 'Roboto', sans-serif;
+}
+.text {
+    color:black;
+    margin-top: 1%;
+    margin-bottom: 0.5%;
+    margin-left: 40%;
+    margin-right: 38%;
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    background-color: white;
+}
+.background{
+    background-color: white;
+}
+.text2{
+    color:gray;
+    text-align: center;
+    margin-bottom: 25px;
+}
+@media (max-width: 600px) {
+	.text {		
+	    text-align: center;
+	}
+    .text2 {
+	    text-align: center;
+	}
+}
+</style>
+</head>
+<body>
+    <div class="text2">
+        <a href="/clock"><img src="assets/reports page arrow active.png"></a>
+        <img  src="assets/sign in page active button.png">
+        <a href="/" style="color:gray; text-decoration: underline;">SIGN OUT</a>
+    </div>   
+    <div class="background">
+        <div class="text">
+            <br>
+            <b class="background">{{time | date : "EEEE "}}</b>{{time | date : " d MMM,  HH:mm "}}
+        </div>  
+        <div class="text" style="font-weight: bold; text-align: center;">
+            <br>
+            REPORTS
+        </div>  
+        <div class="text" >
+            <br>
+            <b class="background">Time report for {{time1 | date : "EEEE, "}}</b> {{time1 | date : " d MMM:"}}
+            
+        </div> 
+        <div class="text" >
+            <br>
+            <b class="background">Time report for {{time2 | date : "EEEE, "}}</b> {{time2 | date : " d MMM:"}}
+        </div> 
+    </div>      
+  
+</body>
+</html>
