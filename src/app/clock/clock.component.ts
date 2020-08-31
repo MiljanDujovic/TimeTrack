@@ -13,6 +13,7 @@ export class ClockComponent implements OnInit {
   time:any;
   isTicking: boolean = false;
   startText: string;
+  
   numberOfClicks: number = 0;
   ngOnInit() {
     setInterval(() => {
@@ -26,7 +27,7 @@ export class ClockComponent implements OnInit {
     event.preventDefault()
     console.log("IDE GASSSSSSSSSSSSSSSSSS")
     this.numberOfClicks++;
-    this.startText = 'CLOCK OUT';
+    
     if(this.numberOfClicks%2 !=0){
     
       
@@ -37,6 +38,7 @@ export class ClockComponent implements OnInit {
     else {
       this.isTicking = false;
       this.startText = 'CLOCK IN';
+      
     }
   
 }

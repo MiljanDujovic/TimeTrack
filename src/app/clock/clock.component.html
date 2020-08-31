@@ -45,6 +45,21 @@
 	background:  gray;
 
 }
+.bttn3 {
+    margin-top: 2%;
+    margin-bottom: 0.5%;
+    margin-left: 42%;
+    margin-right: 25%;
+	text-align: center;
+	text-decoration: none;
+	font-weight: 800;
+	padding: 10px 10px;
+	border-radius: 10px;
+	color: black;
+	font-family: 'Roboto', sans-serif;
+	background:  #eb6363;
+
+}
 .line {
     border-style: solid;
     border-bottom-width:  2px;
@@ -108,8 +123,8 @@ h1 {
         </div>
         <br><br>  
         <input style="color:black" class="bttn2" type="submit" value="REPORTS" onclick="">
-        <input style="color:white" class="bttn" type="submit" value="startText" (click)="clockInButtonPressed()">
-        {{ startText }}
+        <button style="color: white" class="bttn" type="button" value="startText" (click)="clockInButtonPressed()">{{startText}}</button>
+       
     </div> 
     </form>
 </body>

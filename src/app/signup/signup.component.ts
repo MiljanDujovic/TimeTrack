@@ -26,4 +26,8 @@ export class SignupComponent implements OnInit {
       console.log(fullname, username, password)
   }
   
+
+ 
 }
+
+
