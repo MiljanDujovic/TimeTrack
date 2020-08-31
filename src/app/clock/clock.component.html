@@ -108,7 +108,8 @@ h1 {
         </div>
         <br><br>  
         <input style="color:black" class="bttn2" type="submit" value="REPORTS" onclick="">
-        <input style="color:white" class="bttn" type="submit" value="CLOCK IN" onclick="clockInButtonPressed($pressed)">
+        <input style="color:white" class="bttn" type="submit" value="startText" (click)="clockInButtonPressed()">
+        {{ startText }}
     </div> 
     </form>
 </body>

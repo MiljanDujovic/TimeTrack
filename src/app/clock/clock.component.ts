@@ -12,24 +12,33 @@ export class ClockComponent implements OnInit {
   clock = new Date();
   time:any;
   isTicking: boolean = false;
-  startText = 'CLOCKIN';
+  startText: string;
   numberOfClicks: number = 0;
   ngOnInit() {
     setInterval(() => {
        this.time = new Date();
     }, 1000);
+    this.startText = 'CLOCK IN'
 }
   constructor() { }
   
-  clockInButtonPressed (pressed) {
-    
+  clockInButtonPressed () {
+    event.preventDefault()
+    console.log("IDE GASSSSSSSSSSSSSSSSSS")
     this.numberOfClicks++;
-    if (this.numberOfClicks%2 == 0) {
+    this.startText = 'CLOCK OUT';
+    if(this.numberOfClicks%2 !=0){
+    
+      
       this.isTicking = true;
-      this.startText = 'CLOCKOUT';
+      this.startText = 'CLOCK OUT';
       console.log(this.numberOfClicks);
     }
-    
+    else {
+      this.isTicking = false;
+      this.startText = 'CLOCK IN';
+    }
+  
 }
  
    

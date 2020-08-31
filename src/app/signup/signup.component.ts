@@ -8,9 +8,9 @@ import { from } from 'rxjs';
 })
 
 export class SignupComponent implements OnInit {
-  mongo: MongoClient;
-  constructor(mongo: MongoClient) { 
-    this.mongo = mongo;
+  
+  constructor() { 
+    
   }
 
   ngOnInit(): void {
@@ -22,10 +22,7 @@ export class SignupComponent implements OnInit {
       const fullname = target.querySelector('#fullname').value
       const username = target.querySelector('#username').value
       const password = target.querySelector('#password').value
-      const cpassword = target.querySelector('#cpassword').value
-      if(password != cpassword) {
-        errors.push("Passwords do not match")
-      }
+    
       console.log(fullname, username, password)
   }
   
