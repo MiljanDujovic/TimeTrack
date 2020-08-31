@@ -19,7 +19,7 @@
     margin-top: 2%;
     margin-bottom: 0.5%;
     margin-left: 42%;
-    margin-right: 25%;
+    margin-right: 40%;
 	text-align: center;
 	text-decoration: none;
 	font-weight: 800;
@@ -43,21 +43,6 @@
 	color: black;
 	font-family: 'Roboto', sans-serif;
 	background:  gray;
-
-}
-.bttn3 {
-    margin-top: 2%;
-    margin-bottom: 0.5%;
-    margin-left: 42%;
-    margin-right: 25%;
-	text-align: center;
-	text-decoration: none;
-	font-weight: 800;
-	padding: 10px 10px;
-	border-radius: 10px;
-	color: black;
-	font-family: 'Roboto', sans-serif;
-	background:  #eb6363;
 
 }
 .line {
@@ -123,7 +108,7 @@ h1 {
         </div>
         <br><br>  
         <input style="color:black" class="bttn2" type="submit" value="REPORTS" onclick="">
-        <button style="color: white" class="bttn" type="button" value="startText" (click)="clockInButtonPressed()">{{startText}}</button>
+        <button class="bttn" [style.background-color]="isTicking ? '#eb6363' : '#00cc66'"  type="button" value="startText" (click)="clockInButtonPressed()">{{startText}}</button>
        
     </div> 
     </form>
